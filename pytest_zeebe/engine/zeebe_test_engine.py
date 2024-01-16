@@ -2,7 +2,8 @@ import json
 
 import grpc
 
-from pytest_zeebe.engine.engine_control_grpc import pytest_zeebe_engine_control_pb2, pytest_zeebe_engine_control_pb2_grpc
+from pytest_zeebe.engine.engine_control_grpc import pytest_zeebe_engine_control_pb2, \
+    pytest_zeebe_engine_control_pb2_grpc
 from pytest_zeebe.engine.engine_control_grpc.pytest_zeebe_engine_control_pb2_grpc import EngineControlStub
 
 

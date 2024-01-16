@@ -6,10 +6,10 @@ from typing import Tuple
 import grpc
 
 from pytest_zeebe.client.client_grpc.pytest_zeebe_gateway_pb2 import CreateProcessInstanceRequest, \
-    CreateProcessInstanceWithResultRequest, CancelProcessInstanceRequest, DeployProcessResponse, DeployProcessRequest, \
-    ProcessRequestObject, DeployResourceRequest, Resource, PublishMessageResponse, PublishMessageRequest, \
+    CreateProcessInstanceWithResultRequest, CancelProcessInstanceRequest, DeployProcessResponse, DeployResourceRequest, \
+    Resource, PublishMessageResponse, PublishMessageRequest, \
     BroadcastSignalResponse, BroadcastSignalRequest, EvaluateDecisionRequest, EvaluateDecisionResponse, \
-    ActivateJobsRequest, ActivateJobsResponse, ActivatedJob, CompleteJobRequest, CompleteJobResponse, \
+    ActivateJobsRequest, ActivatedJob, CompleteJobRequest, CompleteJobResponse, \
     ThrowErrorResponse, ThrowErrorRequest, FailJobResponse, FailJobRequest, CreateProcessInstanceResponse
 from pytest_zeebe.client.client_grpc.pytest_zeebe_gateway_pb2_grpc import GatewayStub
 from pytest_zeebe.engine.zeebe_test_engine import ZeebeTestEngine

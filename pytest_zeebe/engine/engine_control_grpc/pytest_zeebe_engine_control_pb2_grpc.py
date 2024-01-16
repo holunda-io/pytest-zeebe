@@ -2,7 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from pytest_zeebe.engine.engine_control_grpc import pytest_zeebe_engine_control_pb2 as pytest__zeebe_dot_engine_dot_engine__control__grpc_dot_pytest__zeebe__engine__control__pb2
+from pytest_zeebe.engine.engine_control_grpc import \
+    pytest_zeebe_engine_control_pb2 as pytest__zeebe_dot_engine_dot_engine__control__grpc_dot_pytest__zeebe__engine__control__pb2
 
 
 class EngineControlStub(object):

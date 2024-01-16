@@ -1,8 +1,9 @@
+import json
+
 from pytest_zeebe.filters.incident_filter import IncidentRecordFilter
 from pytest_zeebe.filters.process_instance_filter import ProcessInstanceRecordFilter
 from pytest_zeebe.filters.process_message_subscription_filter import ProcessMessageSubscriptionRecordFilter
 from pytest_zeebe.filters.variable_filter import VariableRecordFilter
-import json
 
 
 class ProcessInstanceAssert:

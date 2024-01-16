@@ -2,7 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from pytest_zeebe.client.client_grpc import pytest_zeebe_gateway_pb2 as pytest__zeebe_dot_client_dot_client__grpc_dot_pytest__zeebe__gateway__pb2
+from pytest_zeebe.client.client_grpc import \
+    pytest_zeebe_gateway_pb2 as pytest__zeebe_dot_client_dot_client__grpc_dot_pytest__zeebe__gateway__pb2
 
 
 class GatewayStub(object):

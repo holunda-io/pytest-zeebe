@@ -7,9 +7,11 @@ local = threading.local()
 
 
 def assert_that(process_instance: CreateProcessInstanceResponse):
+    engine = local.zeebe_test_engine
+    engine.wait_for_idle_state()
     return ProcessInstanceAssert(
         process_instance.processInstanceKey,
-        local.zeebe_test_engine.get_records()
+        engine.get_records()
     )
 
 

@@ -595,22 +595,7 @@ files = [
     {file = "wrapt-1.16.0.tar.gz", hash = "sha256:5f370f952971e7d17c7d1ead40e49f32345a7f7a5373571ef44d800d06b1899d"},
 ]
 
-[[package]]
-name = "zeebe-grpc"
-version = "8.2.15"
-description = "zeebe Python gRPC Gateway"
-optional = false
-python-versions = "*"
-files = [
-    {file = "zeebe_grpc-8.2.15-py3-none-any.whl", hash = "sha256:7cb2d545d29004949845e2ee4adbc00c97e743b63c71d69eb24f819861648701"},
-    {file = "zeebe_grpc-8.2.15.tar.gz", hash = "sha256:ee31edb727c027de08558138528d84d090f7bf69d6bcb7f82b3b965dcd0278c8"},
-]
-
-[package.dependencies]
-grpcio = ">=1.49,<2.0"
-protobuf = ">=4.21,<5.0"
-
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "4e4f031e41588f466bcdfde2ab0bd25fa4279971523d813870ad898bfa3f63fa"
+content-hash = "f5184106013e83a6d40743e310fbbed4a67ffae8bbaf2befb264d2f6fbf38bec"
