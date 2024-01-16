@@ -10,7 +10,7 @@ from pytest_zeebe.engine.zeebe_test_engine import ZeebeTestEngine
 
 logger = logging.getLogger(__name__)
 
-ZEEBE_TEST_IMAGE = "zeebe-process-test:local"
+ZEEBE_TEST_IMAGE = "camunda/zeebe-process-test-engine"
 AGENT_PORT = 26501
 ENGINE_PORT = 26500
 
