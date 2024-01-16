@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pytest-zeebe"
+version = "0.1.10"
+description = "Pytest fixtures for testing Camunda 8 processes using a Zeebe test engine."
+authors = ["Bennet Krause <bennet.krause@holisticon.de>"]
+repository = "https://github.com/holunda-io/pytest-zeebe"
+homepage = "https://www.holisticon.de/"
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+testcontainers = "^3.7.1"
+grpcio = "^1.60.0"
+zeebe-grpc = ">=1.2.0, <9.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+setuptools = "^68.2.2"
+grpcio-tools = "^1.60.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.2"
+pytest-dotenv = "^0.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.plugins.pytest11]
+pytest-zeebe = "pytest_zeebe.fixtures"
