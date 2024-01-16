@@ -11,7 +11,7 @@ def deploy(zeebe_test_client: ZeebeTestClient):
     zeebe_test_client.deploy_process("test.bpmn")
 
 
-def test(zeebe_test_client: ZeebeTestClient):
+def test_happy_path(zeebe_test_client: ZeebeTestClient):
     # given
     variables = {
         "var": "A"
@@ -23,7 +23,7 @@ def test(zeebe_test_client: ZeebeTestClient):
 
     # -> complete Task A
     zeebe_test_client.complete_task("taskA")
-    
+
     assert_that(process_instance).is_waiting_at_elements("TaskC")
 
     # -> complete Task C

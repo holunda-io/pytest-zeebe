@@ -20,4 +20,5 @@ jobs:
       - name: Install dependencies
         run: poetry install
       - name: Run pytest
+        working-directory: tests
         run: poetry run pytest
