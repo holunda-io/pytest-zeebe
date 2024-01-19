@@ -13,6 +13,11 @@ This package provides a set of fixtures to set up Zeebe process tests for Python
 - (optionally) injects a ZeebeTestEngine to await idle state or access raw zeebe records
 - provides rich assertions for the process instance (goal: equal to zeebe-process-test BpmnAssertions)
 
+## Install
+```
+pip install pytest-zeebe
+```
+
 
 ## Example Usage
 The engine is reset before every test, so you can create a fixture to deploy your process automatically:
