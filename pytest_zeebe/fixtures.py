@@ -1,4 +1,5 @@
 import logging
+import os
 
 import pytest
 from testcontainers.core.container import DockerContainer
@@ -10,7 +11,9 @@ from pytest_zeebe.engine.zeebe_test_engine import ZeebeTestEngine
 
 logger = logging.getLogger(__name__)
 
-ZEEBE_TEST_IMAGE = "camunda/zeebe-process-test-engine"
+DEFAULT_ZEEBE_TEST_IMAGE = "camunda/zeebe-process-test-engine"
+DEFAULT_ZEEBE_TEST_IMAGE_TAG = "latest"
+
 AGENT_PORT = 26501
 ENGINE_PORT = 26500
 
@@ -19,7 +22,9 @@ LOG_READY_PREDICATE = "ZeebeProcessTestEngine container has started"
 
 @pytest.fixture(scope="module")
 def _container():
-    container = DockerContainer(ZEEBE_TEST_IMAGE)
+    image = os.environ.get("ZEEBE_TEST_IMAGE", DEFAULT_ZEEBE_TEST_IMAGE)
+    tag = os.environ.get("ZEEBE_TEST_IMAGE_TAG", DEFAULT_ZEEBE_TEST_IMAGE_TAG)
+    container = DockerContainer(f"{image}:{tag}")
     container.with_exposed_ports(AGENT_PORT, ENGINE_PORT)
     container.start()
 
