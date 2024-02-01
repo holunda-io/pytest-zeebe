@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytest-zeebe"
-version = "0.1.1"
+version = "0.1.2"
 description = "Pytest fixtures for testing Camunda 8 processes using a Zeebe test engine."
 authors = ["Bennet Krause <bennet.krause@holisticon.de>"]
 repository = "https://github.com/holunda-io/pytest-zeebe"
@@ -13,6 +13,7 @@ python = "^3.11"
 pytest = "^7.4.2"
 testcontainers = "^3.7.1"
 grpcio = "^1.60.0"
+protobuf = "^4.25.2"
 
 
 [tool.poetry.group.dev.dependencies]
